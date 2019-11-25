@@ -1,0 +1,10 @@
+<section>
+    <dropzone class="row m-0 form-group dr-custom" id="THCD_lblKQCVChonTepTin" #drpzone [config]="config"
+        [disabled]="onlyView" [message]="l('THCD_lblKQCVChonTepTin')" (addedFile)="onAddedFile($event)"
+        (removedFile)="onRemoveFile($event)" (error)="onError($event)" (sendingMultiple)="onSending($event)"
+        (successMultiple)="onSuccess($event)">
+        <dinhkemSampleChitiet *ngFor="let uploadedFile of tepLamViecHienTai" [uploadedFile]="uploadedFile"
+            (onDownload)="onDownload($event)" (onDelete)="onDelete($event)" [onlyView]="onlyView">
+        </dinhkemSampleChitiet>
+    </dropzone>
+</section>

@@ -1,0 +1,111 @@
+<form autocomplete="off" #createCongViecModal="ngForm" (ngSubmit)="save()">
+    <h1 mat-dialog-title>{{ "CreateCongViec" | localize }}</h1>
+    <mat-dialog-content style="width:800px;height:500px;">
+        <mat-tab-group>
+            <mat-tab [label]="'CongViecDetails' | localize">
+                <br />
+                <div class="row-fluid">
+                    <div class="col-md-6">
+                        <mat-form-field>
+                            <mat-select [placeholder]="l('TramDV')" [(ngModel)]="congViec.tramDichVuId" name="TramDichVu">
+                                <mat-option>None</mat-option>
+                                <mat-option *ngFor="let tramdichvu of danhSachTramDichVu" [value]="tramdichvu.id">{{ tramdichvu.displayName }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field>
+                            <input matInput name="TieuDe" [placeholder]="'TieuDe' | localize"
+                                [(ngModel)]="congViec.tieuDe" required maxlength="255" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <textarea matInput name="NoiDung" [placeholder]="'NoiDung' | localize"
+                                [(ngModel)]="congViec.noiDung" rows="5"></textarea>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field>
+                            <mat-select [placeholder]="'NhomDichVu' | localize" [(ngModel)]="nhomDichVuId"
+                                name="NhomDichVu" (selectionChange)="onChangeNhomDichVu($event.value)">
+                                <mat-option *ngFor="let nhomdichvu of danhSachNhomDichVu" [value]="nhomdichvu.id">{{ nhomdichvu.displayName }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field>
+                            <mat-select [placeholder]="'DichVu' | localize" [(ngModel)]="congViec.dichVuId" name="DichVu">
+                                <mat-option *ngFor="let dichvu of danhSachDichVu" [value]="dichvu.id">{{ dichvu.displayName }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab [label]="'KhachHangInfos' | localize">
+                <br />
+                <div class="row-fluid">
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <mat-select [placeholder]="'ChonKhachHang' | localize" [(ngModel)]="congViec.khachHangId"
+                                name="KhachHang" (selectionChange)="onChangeKhachHang($event.value)">
+                                <mat-option>None</mat-option>
+                                <mat-option *ngFor="let khachhang of danhSachKhachHang" [value]="khachhang.id">{{ khachhang.displayName }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field>
+                            <input matInput name="KhachHangName" [placeholder]="'Name' | localize"
+                                [(ngModel)]="congViec.khachHangName" required maxlength="32" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field>
+                            <input matInput name="PhoneNumber" [placeholder]="'PhoneNumber' | localize"
+                                [(ngModel)]="congViec.soDienThoai" required maxlength="12" pattern="\d+(\s?\d*)+" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <input matInput name="DiaChi" [placeholder]="'DiaChi' | localize"
+                                [(ngModel)]="congViec.diaChi" maxlength="255" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field>
+                            <mat-select [placeholder]="'TinhThanh' | localize" [(ngModel)]="congViec.diaChiTinhThanhId"
+                                name="DiaChiTinhThanh" (selectionChange)="onChangeTinhThanh($event.value)">
+                                <mat-option *ngFor="let tinhthanh of danhSachTinhThanh" [value]="tinhthanh.id">{{ tinhthanh.displayName }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field>
+                            <mat-select [placeholder]="'QuanHuyen' | localize" [(ngModel)]="congViec.diaChiQuanHuyenId" name="DiaChiQuanHuyen">
+                                <mat-option *ngFor="let quanhuyen of danhSachQuanHuyen" [value]="quanhuyen.id">{{ quanhuyen.displayName }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <label for="th_CongViecKHNam_DinhkemFile">{{l("Đính kèm")}}</label>
+                        <dinhKem #uploadFile [workingFiles]="uploadingFiles" [congViec]="congViec"
+                        (successUpload)="uploadSuccess($event)"
+                        [onlyView]="false">
+                        </dinhKem>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-dialog-content>
+    <div mat-dialog-actions align="end" style="padding-bottom: 20px;">
+        <button mat-button type="button" [disabled]="saving" (click)="close(false)" style="margin-right: 5px;">
+            {{ "Cancel" | localize }}
+        </button>
+        <button mat-flat-button type="submit" flex="15" color="primary"
+            [disabled]="!createCongViecModal.form.valid || saving">
+            {{ "Save" | localize }}
+        </button>
+    </div>
+</form>

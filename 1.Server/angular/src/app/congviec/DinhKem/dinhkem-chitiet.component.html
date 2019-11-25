@@ -1,0 +1,43 @@
+<div [class]="thumbClass"
+     *ngIf="isFile">
+    <!-- ẢNH -->
+    <div class="dz-image">
+        <img *ngIf="isImage"
+             data-dz-thumbnail
+             class="dz-icon-size"
+             [src]="imageUrl">
+    </div>
+    <!-- NỘI DUNG -->
+    <div class="dz-details"
+         data-toggle="tooltip"
+         data-placement="bottom"
+         [title]="uploadedFile.fileName">
+        <div class="dz-size">
+            <span data-dz-size>
+                <strong>{{fileSize}}</strong>
+            </span>
+        </div>
+
+        <!-- SỰ KIỆN -->
+        <div class="row">
+            <div class="col-12 text-center p-0">
+                <div class="dz-link" *ngIf="!onlyView">
+                    <a href="javascript:undefined;"
+                       class="removelink pull-left"
+                       (click)="delete()">{{l('THCD_btnDKDeleteFile')}}</a>
+                    <span> | </span>
+                    <a href="javascript:undefined;"
+                       class="removelink pull-right"
+                       (click)="download()">{{l('THCD_btnDKDownloadFile')}}</a>
+                </div>
+
+
+                <div class="dz-link" *ngIf="onlyView">
+                    <a href="javascript:undefined;"
+                       class="removelink"
+                       (click)="download()">{{l('THCD_btnDKDownloadFile')}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<form autocomplete="off" #editNhomDichVuForm="ngForm" (ngSubmit)="save()">
+    <h1 mat-dialog-title>{{ "EditDanhMucNhomDichVu" | localize }} <b>{{ nhomDichVuName }}</b></h1>
+    <mat-dialog-content style="width:600px;height:300px;">
+        <mat-tab-group>
+            <mat-tab [label]="'DanhMucNhomDichVuDetails' | localize">
+                <br />
+                <div class="row-fluid">
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <input matInput name="Name" [placeholder]="'NhomDichVuName' | localize" [(ngModel)]="danhMucNhomDichVu.name"
+                                required maxlength="50" />
+                        </mat-form-field>
+                        <mat-form-field>
+                            <textarea matInput name="Description" [placeholder]="'Description' | localize"
+                                [(ngModel)]="danhMucNhomDichVu.description" rows="5"></textarea>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-dialog-content>
+    <div mat-dialog-actions align="end" style="padding-bottom: 20px;">
+        <button mat-button type="button" [disabled]="saving" (click)="close(false)" style="margin-right: 5px;">
+            {{ "Cancel" | localize }}
+        </button>
+        <button mat-flat-button type="submit" flex="15" color="primary"
+            [disabled]="!editNhomDichVuForm.form.valid || saving">
+            {{ "Save" | localize }}
+        </button>
+    </div>
+</form>

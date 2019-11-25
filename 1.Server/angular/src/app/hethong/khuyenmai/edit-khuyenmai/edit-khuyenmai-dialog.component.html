@@ -1,0 +1,44 @@
+<form autocomplete="off" #editKhuyenMaiForm="ngForm" (ngSubmit)="save()">
+    <h1 mat-dialog-title>{{ "EditKhuyenMai" | localize }}</h1>
+    <mat-dialog-content style="width:900px;height:450px;">
+            <div class="row-fluid">
+                <div class="col-md-12">
+                    <mat-form-field>
+                        <input matInput name="Name" [placeholder]="'KhuyenMaiName' | localize" [(ngModel)]="khuyenMai.name"
+                            required maxlength="50" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <textarea matInput name="Description" [placeholder]="'Description' | localize"
+                            [(ngModel)]="khuyenMai.description" rows="2" maxlength="4000"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+
+                    <img alt="Image" class="profile-picture" (click)="fileInput.click()" height="272px" width="250px"
+                        src="data:image/png;base64,{{ imageBase64 }}" style="cursor:pointer;" />
+                    <span class="hiddenFileInput">
+                        <input type="file" id="imageInput" #fileInput (change)="handleFileSelect($event)" accept="image/*">
+                    </span>
+                    <div>
+                        <div class="checkbox-wrapper">
+                            <mat-checkbox name="IsActive" [(ngModel)]="khuyenMai.isActive">
+                                {{ "IsActive" | localize }}
+                            </mat-checkbox>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p-editor [(ngModel)]="khuyenMai.content" [style]="{'height':'234px'}" [ngModelOptions]="{standalone: true}"></p-editor>
+                </div>
+            </div>
+    </mat-dialog-content>
+    <div mat-dialog-actions align="end" style="padding-bottom: 20px;">
+        <button mat-button type="button" [disabled]="saving" (click)="close(false)" style="margin-right: 5px;">
+            {{ "Cancel" | localize }}
+        </button>
+        <button mat-flat-button type="submit" flex="15" color="primary"
+            [disabled]="!editKhuyenMaiForm.form.valid || saving">
+            {{ "Save" | localize }}
+        </button>
+    </div>
+</form>

@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="en">
+  <texts>
+
+    <text name="DanhMuc" value="Danh mục" />
+    
+    <!-- Danh mục nhóm dịch vụ -->
+    <text name="mnuNhomDichVu" value="Quản lý nhóm dịch vụ" />
+    <text name="DanhMucNhomDichVu" value="Danh mục nhóm dịch vụ" />
+    <text name="NhomDichVuName" value="Nhóm dịch vụ" />
+    <text name="CreateNewDanhMucNhomDichVu" value="Thêm mới nhóm dịch vụ" />
+    <text name="EditDanhMucNhomDichVu" value="Sửa nhóm dịch vụ" />
+    <text name="DanhMucNhomDichVuDetails" value="Thông tin chi tiết" />
+    <!-- End danh mục nhóm dịch vụ -->
+
+    <!-- Danh mục dịch vụ -->
+    <text name="mnuDichVu" value="Quản lý dịch vụ" />
+    <text name="DanhMucDichVu" value="Danh mục dịch vụ" />
+    <text name="CreateNewDanhMucDichVu" value="Thêm mới dịch vụ" />
+    <text name="EditDanhMucDichVu" value="Sửa dịch vụ" />
+    <text name="DanhMucDichVuDetails" value="Thông tin chi tiết" />
+    <!-- End danh mục dịch vụ -->
+
+    <!-- Danh mục dịch vụ -->
+    <text name="mnuHangMuc" value="Quản lý hạng mục" />
+    <text name="DanhMucHangMuc" value="Danh mục hạng mục" />
+    <text name="HangMucName" value="Hạng mục" />
+    <text name="DonGia" value="Đơn giá" />
+    <text name="DonViTinh" value="Đơn vị tính" />
+    <text name="CreateNewHangMucDichVu" value="Thêm mới hạng mục" />
+    <text name="EditHangMucDichVu" value="Sửa hạng mục" />
+    <text name="DanhMucHangMucDetails" value="Thông tin chi tiết" />
+    <!-- End danh mục dịch vụ -->
+
+    <!-- Danh mục nhóm dịch vụ -->
+    <text name="mnuHang" value="Quản lý hãng" />
+    <text name="DanhMucHang" value="Danh mục hãng" />
+    <text name="HangName" value="Hãng" />
+    <text name="CreateNewDanhMucHang" value="Thêm mới hãng" />
+    <text name="EditDanhMucHang" value="Sửa hãng" />
+    <text name="DanhMucHangDetails" value="Thông tin chi tiết" />
+    <!-- End danh mục nhóm dịch vụ -->
+    
+    <!-- Trạm dịch vụ -->
+    <text name="TramDichVu" value="Quản lý trạm dịch vụ" />
+    <text name="TramDV" value="Trạm dịch vụ" />
+    <text name="CreateTramDichVu" value="Thêm mới trạm dịch vụ" />
+    <text name="EditTramDichVu" value="Sửa trạm dịch vụ" />
+    <text name="TramDichVuDetails" value="Thông tin chi tiết" />
+    <text name="DanhSachNhanVien" value="Thông tin nhân viên" />
+    <text name="TramDichVuCode" value="Mã trạm" />
+    <text name="TramDichVuName" value="Tên trạm" />
+    <text name="TramTruongName" value="Quản lý" />
+    <!-- Kết thúc trạm dịch vụ -->
+
+    <!-- Danh sách quyền -->
+    <text name="DanhMucGiaDichVu" value="Quản lý danh mục giá dịch vụ" />
+    <!-- Kết thúc danh sách quyền -->
+    
+    <!-- Đổi mật khẩu -->
+    <text name="CurrentPassword" value="Mật khẩu hiện tại" />
+    <text name="NewPassword" value="Mật khẩu mới" />
+    <text name="ConfirmNewPassword" value="Xác nhận mật khẩu mới" />
+    
+    <text name="EnterAdminPassword" value="Nhập mật khẩu Admin" />
+    <text name="CopyPasswordToUser" value="Copy và gửi password mới cho người dùng" />
+    <!-- Kết thúc đổi mật khẩu -->
+    
+    <!-- Đổi thông tin -->
+    <text name="UpdateInfo" value="Cá nhân" />
+    <text name="UpdateInfoDetail" value="Cập nhật thông tin cá nhân" />
+    <text name="InfoChangedSuccessfully" value="Đổi thông tin thành công." />
+    <!-- Kết thúc đổi thông tin -->
+    
+    <!-- Quản lý nhân viên -->
+    <text name="mnuNhanVien" value="Quản lý nhân viên" />
+    <text name="Status" value="Trạng thái" />
+    <text name="All" value="Tất cả" />
+    <text name="IsNotActive" value="Đang khóa" />
+    <text name="ChuyenMon" value="Chuyên môn" />
+    <text name="PhuTrachTinhThanh" value="Phụ trách tỉnh thành" />
+    <text name="PhuTrachQuanHuyen" value="Phụ trách quận huyện" />
+    <text name="VaiTroName" value="Vai trò" />
+    <!-- Kết thúc quản lý nhân viên -->
+
+    <!-- Quản lý khách hàng -->
+    <text name="mnuKhachHang" value="Quản lý khách hàng" />
+    
+    <text name="ImportKhachHang" value="Import khách hàng" />
+    <text name="ImportKhachHang_btnChonFile" value="Chọn file" />
+    <text name="ImportKhachHang_btnTaiLen" value="Tải lên" />
+    <text name="ImportExcel" value="Nhập Excel" />
+    <text name="ImportExcel_btnTaiFileMau" value="Tải file mẫu" />
+    
+    <text name="ImportKhachHang_msgWrongFileType" value="Hệ thống chỉ cho phép tải lên file excel" />
+    <text name="ImportKhachHang_msgWrongFileSize" value="Dung lượng file tải lên vượt quá 5MB" />
+    <text name="ImportKhachHang_msgUploadFileError" value="Tải file lên bị lỗi!" />
+    <text name="ImportKhachHang_lblNotSelectFileMessage" value="Chưa chọn file tải lên!" />
+    <text name="ImportKhachHang_msgImportingFile" value="Đang xử lý file {0}..." />
+    
+    <!-- Kết thúc quản lý khách hàng -->
+
+    <!-- Quản lý công việc -->
+    <text name="mnuQuanLyCongViec" value="Quản lý công việc" />
+    <text name="QuanLyCongViec" value="Quản lý công việc" />
+    <text name="KhachHangName" value="Tên khách hàng" />
+    <text name="SoDienThoai" value="Số điện thoại" />
+    <text name="DichVuName" value="Dịch vụ" />
+    <text name="NgayGioHen" value="Ngày giờ hẹn" />
+    <text name="NhanVienName" value="Nhân viên" />
+    <text name="TrangThai" value="Trạng thái" />
+
+    <text name="CreateCongViec" value="Thêm mới công việc" />
+    <text name="EditCongViec" value="Sửa công việc" />
+    <text name="CongViecDetails" value="Thông tin chi tiết" />
+    <text name="KhachHangInfos" value="Thông tin khách hàng" />
+    <text name="TieuDe" value="Tiêu đề" />
+    <text name="NoiDung" value="Nội dung" />
+    <text name="NhomDichVu" value="Nhóm dịch vụ" />
+    <text name="DichVu" value="Dịch vụ" />
+    <text name="ChonKhachHang" value="Khách hàng" />
+
+    <text name="UserIsNotCustomer" value="Chỉ khách hàng mới được dùng chức năng này!" />
+    <text name="UserIsNotStaff" value="Chỉ nhân viên mới được dùng chức năng này!" />
+    <text name="CongViecIsNotFound" value="Không tìm thấy công việc." />
+    
+    <text name="PhanBoVeTram" value="Phân bổ về trạm" />
+    <text name="PhanBoVeNhanVien" value="Phân bổ về nhân viên" />
+    <text name="QuanLyCongViec_PhanBoVeTram" value="QLCV - Phân bổ về trạm" />
+    <text name="QuanLyCongViec_PhanBoVeNhanVien" value="QLCV - Phân bổ về nhân viên" />
+    <text name="PhanBoCongViecVeTram" value="Phân bổ công việc về trạm" />
+    <text name="PhanBoCongViecVeNhanVien" value="Phân bổ công việc về nhân viên" />
+    <text name="GhiChuQuanLy" value="Ghi chú của quản lý" />
+    
+    <text name="ThuHoi" value="Thu hồi về trạm" />
+    <text name="HuyBoCongViecKhachHang" value="Hủy bỏ công việc của" />
+    <text name="ThuHoiCongViecKhachHang" value="Thu hồi công việc của" />
+
+    <text name="DaGiaoLinhKien" value="Đã giao linh kiện" />
+    <text name="DaHoanThanh" value="Đã hoàn thành" />
+    <text name="ConfirmLinhKienWarningMessage" value="Xác nhận đã bàn giao linh kiện!" />
+    <text name="ConfirmHoanThanhWarningMessage" value="Xác nhận đã hoàn thành công việc!" />
+
+    <text name="ImportCongViec" value="Import công việc" />
+    <text name="ImportCongViec_btnChonFile" value="Chọn file" />
+    <text name="ImportCongViec_btnTaiLen" value="Tải lên" />
+
+    <text name="ImportCongViec_msgWrongFileType" value="Hệ thống chỉ cho phép tải lên file excel" />
+    <text name="ImportCongViec_msgWrongFileSize" value="Dung lượng file tải lên vượt quá 5MB" />
+    <text name="ImportCongViec_msgUploadFileError" value="Tải file lên bị lỗi!" />
+    <text name="ImportCongViec_lblNotSelectFileMessage" value="Chưa chọn file tải lên!" />
+    <text name="ImportCongViec_msgImportingFile" value="Đang xử lý file {0}..." />
+    <!-- Kết thúc quản lý công việc -->
+
+    <!-- Quản lý khách hàng -->
+    <text name="CreateKhachHang" value="Thêm mới khách hàng" />
+    <text name="EditKhachHang" value="Sửa khách hàng" />
+    <text name="KhachHangDetails" value="Thông tin chi tiết" />
+    <text name="QuanLyKhachHang" value="Quản lý khách hàng" />
+    <text name="KhachHangIsNotFound" value="Không tìm thấy khách hàng." />
+    <text name="AccountIsNotFound" value="Khách hàng chưa có tài khoản." />
+    
+    <text name="Active" value="Kích hoạt" />
+    <text name="Lock" value="Khóa" />
+    <text name="UnLock" value="Mở khóa" />
+    <text name="SetPassword" value="Đổi mật khẩu" />
+    <text name="CreateAccount" value="Thêm tài khoản" />
+    <text name="ActiveConfirmMessage" value="Tài khoản {0} sẽ được kích hoạt." />
+    <text name="LockConfirmMessage" value="Tài khoản {0} sẽ bị khóa." />
+    <text name="UnlockConfirmMessage" value="Tài khoản {0} sẽ được mở khóa." />
+    <text name="LockedSuccessfully" value="Khóa tài khoản thành công." />
+    <text name="UnlockedSuccessfully" value="Mở khóa tài khoản thành công." />
+    <text name="SetPasswordSuccessfully" value="Đặt mật khẩu thành công." />
+    <text name="CreateAccountConfirmMessage" value="Tạo tài khoản khách hàng {0}, mật khẩu 123456." />
+    <text name="CreateAccountSuccessfully" value="Tạo tài khoản thành công." />
+    <!-- Kết thúc quản lý khách hàng -->
+    
+    <!-- Quản lý sổ bảo hành -->
+    <text name="SoBaoHanhIsNotFound" value="Không tìm thấy sổ bảo hành." />
+    <!-- Kết thúc quản lý sổ bảo hành -->
+    
+    <!-- Vai trò -->
+    <text name="RoleDetails" value="Thông tin chi tiết" />
+    <text name="RolePermissions" value="Thông tin phân quyền" />
+    <!-- Kết thúc vai trò -->
+
+    <!-- Hệ thống -->
+    <text name="HeThong" value="Hệ thống" />
+    <text name="KhuyenMai" value="Khuyến mãi" />
+    <text name="QuanLyKhuyenMai" value="Quản lý khuyến mãi" />
+    <text name="KhuyenMaiName" value="Tiêu đề" />
+    <text name="KhuyenMaiDescription" value="Mô tả" />
+    <text name="KhuyenMaiImage" value="Hình ảnh" />
+    <text name="KhuyenMaiIsActive" value="Hoạt động" />
+    <text name="CreateNewKhuyenMai" value="Thêm mới khuyến mãi" />
+    <text name="EditKhuyenMai" value="Sửa khuyến mãi" />
+    
+    <text name="QuanLyHeThong" value="Quản lý hệ thống" />
+    <text name="DieuKhoanSuDung" value="Điều khoản sử dụng" />
+    <text name="ThongTinHeThong" value="Thông tin hệ thống" />
+    <text name="SoHotLine" value="Số hotline" />
+    <!-- Kết thúc hệ thống -->
+    
+    
+    <!-- Dùng chung -->
+    <text name="Filter" value="Tìm kiếm..." />
+    <text name="Search" value="Tìm kiếm" />
+    <text name="DiaChi" value="Địa chỉ" />
+    <text name="Description" value="Mô tả" />
+    
+    <text name="AreYouSure" value="Bạn chắc chắn không?" />
+    <text name="DeleteWarningMessage" value="{0} sẽ bị xóa vĩnh viễn!" />
+    <text name="DeletedSuccessfully" value="Xóa thành công." />
+    <text name="SuccessfullyDeleted" value="Xóa thành công." />
+    <text name="SavedSuccessfully" value="Lưu thành công." />
+    <text name="PasswordChangedSuccessfully" value="Đổi mật khẩu thành công." />
+    <text name="ConfirmedSuccessfully" value="Xác nhận thành công." />
+    
+    <text name="AddNew">Thêm mới</text>
+    <text name="TinhThanh">Tỉnh thành</text>
+    <text name="QuanHuyen">Quận huyện</text>
+    
+    <text name="LoginRequired">Đăng nhập hệ thống để sử dụng chức năng này.</text>
+    <text name="RoleAdminRequired">Chỉ Admin mới thực hiện được chức năng này.</text>
+    <text name="WrongCurrentPassword">Mật khẩu hiện tại không đúng.</text>
+    <text name="WrongAdminPassword">Mật khẩu Admin không đúng.</text>
+    
+    <text name="WrongUserName">Tài khoản không tồn tại.</text>
+    <text name="WrongUserNameOrEmail">Sai tài khoản hoặc email.</text>
+    <text name="WrongActiveCode">Sai mã kích hoạt.</text>
+    <text name="UserIsLocked">Tài khoản đang bị khóa.</text>
+    <text name="UserIsNotActiveOrLocked">Tài khoản chưa kích hoạt hoặc đang bị khóa.</text>
+    <text name="UserIsNotActive">Tài khoản chưa kích hoạt.</text>
+    <text name="UserIsActivated">Tài khoản đã được kích hoạt.</text>
+    <text name="ActivatedSuccessfully">Kích hoạt tài khoản thành công.</text>
+    <text name="SendEmailSuccessfully">Gửi email thành công.</text>
+    <text name="SendEmailFailed">Không thể gửi email.</text>
+
+    <text name="Identity.DuplicateUserName" value="Tài khoản '{0}' đã tồn tại." />
+    <text name="Identity.DuplicateEmail" value="Email '{0}' đã tồn tại." />
+    <text name="UserIsNotLogin" value="Tài khoản chưa đăng nhập hệ thống." />
+
+    <text name="AttachFile_Warn_SizeLimit" value="File đính kèm không được vượt quá 5MB." />
+    <text name="FileNotFound" value="Không có file tải lên." />
+    <text name="ModelStateInValid" value="Sai định dạng dữ liệu form." />
+    <!-- Kết thúc dùng chung -->
+    
+    <!-- Validate -->
+    <text name="ErrorRequired">Đây là trường bắt buộc.</text>
+    <text name="PasswordNotMatch">Xác nhận mật khẩu không khớp.</text>
+    <!-- Kết thúc validate -->
+    
+    <!-- ************************************************************************************************************** -->
+    <text name="NewCM" value="Quản lý trạm dịch vụ" />
+    <text name="HomePage" value="Trang chủ" />
+    <text name="About" value="About" />
+    <text name="WelcomeMessage" value="Hệ thống quản lý trạm dịch vụ!" />
+    <text name="FormIsNotValidMessage" value="Form is not valid. Please check and fix errors." />
+    <text name="TenantNameCanNotBeEmpty" value="Tenant name can not be empty" />
+    <text name="InvalidUserNameOrPassword" value="Sai tên đăng nhập hoặc mật khẩu" />
+    <text name="ThereIsNoTenantDefinedWithName{0}" value="There is no tenant defined with name {0}" />
+    <text name="TenantIsNotActive" value="Tenant {0} is not active." />
+    <text name="UserIsNotActiveAndCanNotLogin" value="Tài khoản {0} chưa kích hoạt hoặc đang bị khóa." />
+    <text name="UserEmailIsNotConfirmedAndCanNotLogin">Your email address is not confirmed. You can not login.</text>
+    <text name="UserLockedOutMessage">Tài khoản đang bị cấm đăng nhập. Thử lại sau {0} phút.</text>
+    <text name="PleaseEnterLoginInformation" value="Please enter login information" />
+    <text name="TenancyName" value="Tenancy name" />
+    <text name="UserNameOrEmail" value="Tài khoản" />
+    <text name="Password" value="Mật khẩu" />
+    <text name="ResetPassword" value="Reset mật khẩu" />
+    <text name="UpdatePassword" value="Đổi mật khẩu" />
+    <text name="RememberMe" value="Ghi nhớ đăng nhập" />
+    <text name="LogIn" value="Đăng nhập" />
+    <text name="LoginFailed" value="Đăng nhập thất bại!" />
+    <text name="NameSurname" value="Name surname" />
+    <text name="UserName" value="Tài khoản" />
+    <text name="Name" value="Họ tên" />
+    <text name="Surname" value="Surname" />
+    <text name="EmailAddress" value="Email" />
+    <text name="PhoneNumber" value="Số điện thoại" />
+    <text name="Tenants" value="Tenants" />
+    <text name="CreateNewTenant" value="Create new tenant" />
+    <text name="AdminEmailAddress" value="Admin email address" />
+    <text name="AdminPassword" value="Mật khẩu Admin" />
+    <text name="UserPassword" value="Mật khẩu người dùng" />
+    <text name="Save" value="Lưu" />
+    <text name="Cancel" value="Hủy" />
+    <text name="TenantName_Regex_Description" value="Tenant name must be at least 2 chars, starts with a letter and continue with letter, number, dash or underscore." />
+    <text name="DefaultPasswordIs" value="Mật khẩu mặc định là: {0}" />
+    <text name="CanBeEmptyToLoginAsHost" value="Can be empty to login as host." />
+    <text name="Register" value="Register" />
+    <text name="OrLoginWith" value="Or login with" />
+    <text name="WaitingForActivationMessage" value="Your account is waiting to be activated by system admin." />
+    <text name="TenantSelection" value="Tenant Selection" />
+    <text name="TenantSelection_Detail" value="Please select one of the following tenants." />
+    <text name="Logout" value="Đăng xuất" />
+    <text name="RegisterFormUserNameInvalidMessage">Please don't enter an email address for username.</text>
+    <text name="DatabaseConnectionString" value="Database connection string" />
+    <text name="Users" value="Quản lý tài khoản" />
+    <text name="IsActive" value="Hoạt động" />
+    <text name="FullName" value="Full name" />
+    <text name="CreateNewUser" value="Thêm mới nhân viên" />
+    <text name="Yes" value="Có" />
+    <text name="No" value="Không" />
+    <text name="Optional" value="Optional" />
+    <text name="LeaveEmptyToSwitchToHost">Leave empty to switch to the host</text>
+    <text name="CurrentTenant">Current tenant</text>
+    <text name="NotSelected">Not selected</text>
+    <text name="Change">Change</text>
+    <text name="ChangeTenant">Change tenant</text>
+    <text name="MultiLevelMenu">Multi Level Menu</text>
+    <text name="Back">Back</text>
+    <text name="SuccessfullyRegistered">Successfully registered</text>
+    <text name="WaitingForEmailActivation">Your email address should be activated</text>
+    <text name="Roles">Quản lý vai trò</text>
+    <text name="DisplayName">Tên hiển thị</text>
+    <text name="Edit">Sửa</text>
+    <text name="Delete">Xóa</text>
+    <text name="CreateNewRole">Thêm mới vai trò</text>
+    <text name="RoleName">Tên vai trò</text>
+    <text name="Actions">Hành động</text>
+    <text name="CouldNotCompleteLoginOperation">Could not complete login operation. Please try again later.</text>
+    <text name="CouldNotValidateExternalUser">Could not validate external user</text>
+    <text name="EditRole">Sửa vai trò</text>
+    <text name="EditTenant">Edit tenant</text>
+    <text name="EditUser">Sửa tài khoản</text>
+    <text name="TenantIdIsNotActive{0}">TenantId {0} is not active</text>
+    <text name="UnknownTenantId{0}">Unknown tenantId {0}</text>
+    <text name="ThisFieldIsRequired">This field is required</text>
+    <text name="PleaseWait">Please wait...</text>
+    <text name="Administration">Administration</text>
+    <text name="ClearAll">Clear all</text>
+    <text name="ClearOthers">Clear others</text>
+    <text name="LabelOptions">Label options</text>
+    <text name="Permissions">Permissions</text>
+    <text name="RoleDescription">Role description</text>
+    <text name="Refresh">Làm mới</text>
+    <text name="Create">Thêm</text>
+    <text name="UserDetails">Thông tin chi tiết</text>
+    <text name="UserRoles">Thông tin vai trò</text>
+    <text name="ConfirmPassword">Xác nhận mật khẩu</text>
+    <text name="Version">Version</text>
+    <text name="On">On</text>
+    <text name="Off">Off</text>
+    <text name="AreYouSureWantToDelete">Are you sure want to delete {0}?</text>
+    <text name="StartTyping">Start Typing</text>
+    <text name="Skins">Skins</text>
+    <text name="Settings">Settings</text>
+  </texts>
+</localizationDictionary>

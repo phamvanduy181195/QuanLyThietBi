@@ -1,0 +1,47 @@
+<form autocomplete="off" #importKhachHangModal="ngForm" (ngSubmit)="save()">
+    <h1 mat-dialog-title>{{ "ImportKhachHang" | localize }}</h1>
+    
+    <mat-dialog-content style="width:800px;height:350px;">
+        <mat-tab-group>
+            <mat-tab [label]="'UserDetails' | localize">
+                <br />
+                <div class="row-fluid">
+                    <div class="col">
+                        <div class="row" style="margin-bottom: 10px; width: 100%">
+                            <div class="col-md-3">
+                                <button mat-stroked-button color="primary" type="button" (click)="fileInput.click()" title="Chọn file excel để tải lên" style="width: 150px;">
+                                    <mat-icon>note_add</mat-icon> {{ 'ImportKhachHang_btnChonFile' | localize }}</button>
+        
+                                <span class="hiddenFileInput">
+                                    <input type="file" id="importFileInput" #fileInput ng2FileSelect [uploader]="uploader" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+                                </span>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" id="ImportKhachHang_txtSelect" class="form-control" name="ImportKhachHang_txtSelect" [value]="fileUploadName" readonly />
+                            </div>
+                        </div>
+                        <div class="row" style="width: 100%">
+                            <div class="col-md-3">
+                                <button mat-stroked-button color="primary" type="button" (click)="save()" [disabled]="saving || !addedFile" [buttonBusy]="saving" [autoEnable]="false" title="Tải file đã chọn lên server" style="width: 150px;">
+                                    <mat-icon>publish</mat-icon><span> {{'ImportKhachHang_btnTaiLen' | localize}}</span></button>
+                            </div>
+                            <div class="col-md-9">
+                                <textarea id="ImportKhachHang_txtResultSave" class="form-control" name="ImportKhachHang_txtResultSave"
+                                    rows="6" [value]="fileSaveMessage" readonly [disabled]="saving">
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-dialog-content>
+    <div mat-dialog-actions align="end" style="padding-bottom: 20px;">
+        <button mat-stroked-button color="primary" type="button" (click)="download()" style="margin-right: 5px;">
+            <mat-icon>get_app</mat-icon> {{ 'ImportExcel_btnTaiFileMau' | localize }}</button>
+                
+        <button mat-flat-button type="button" color="primary" [disabled]="saving" (click)="close(refreshList)">
+            {{ "Close" | localize }}
+        </button>
+    </div>
+</form>

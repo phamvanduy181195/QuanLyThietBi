@@ -1,0 +1,115 @@
+﻿<form autocomplete="off" #editUserModal="ngForm" (ngSubmit)="save()">
+    <h1 mat-dialog-title>{{ "EditUser" | localize }} <b>{{ user.userName }}</b></h1>
+    <mat-dialog-content style="width:800px;height:400px;">
+        <mat-tab-group>
+            <mat-tab [label]="'UserDetails' | localize">
+                <br />
+                <div class="row-fluid">
+                    <div class="col-md-4">
+                        <img *ngIf="this.user.profilePictureBase64" alt="User-Picture" class="profile-picture" (click)="fileInput.click()" height="200"
+                            width="200" src="data:image/png;base64,{{ user.profilePictureBase64 }}" style="cursor:pointer;" />
+                        <span class="hiddenFileInput">
+                            <input type="file" id="profilePictureInput" #fileInput (change)="handleFileSelect($event)"
+                                accept="image/*">
+                        </span>
+                        <div>
+                            <div class="checkbox-wrapper">
+                                <mat-checkbox name="IsActive" [(ngModel)]="user.isActive">
+                                    {{ "IsActive" | localize }}
+                                </mat-checkbox>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput name="Name" [placeholder]="'Name' | localize"
+                                        [(ngModel)]="user.name" required maxlength="32" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <mat-select [placeholder]="l('TramDV')" [(ngModel)]="user.tramDichVuId" name="TramDichVu">
+                                        <mat-option>None</mat-option>
+                                        <mat-option *ngFor="let tramdichvu of danhSachTramDichVu" [value]="tramdichvu.id">{{ tramdichvu.displayName }}</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput name="PhoneNumber" [placeholder]="'PhoneNumber' | localize"
+                                        [(ngModel)]="user.phoneNumber" required maxlength="12" pattern="\d+(\s?\d*)+" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput name="EmailAddress" [placeholder]="'EmailAddress' | localize"
+                                        [(ngModel)]="user.emailAddress" type="email" required maxlength="256"
+                                        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,})+$" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <mat-select [placeholder]="l('ChuyenMon')" name="ChuyenMon" [(ngModel)]="user.nhomDichVuIds" multiple>
+                                        <mat-option *ngFor="let nhomdichvu of danhSachNhomDichVu" [value]="nhomdichvu.id">{{ nhomdichvu.displayName }}</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <mat-select [placeholder]="l('PhuTrachTinhThanh')" name="PhuTrachTinhThanh"
+                                        [(ngModel)]="user.phuTrachTinhThanhIds" (openedChange)="onChangeTinhThanh($event)" multiple>
+                                        <mat-option *ngFor="let tinhthanh of danhSachTinhThanh" [value]="tinhthanh.id">{{ tinhthanh.displayName }}</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-12">
+                                <mat-form-field>
+                                    <mat-select [placeholder]="l('PhuTrachQuanHuyen')" name="PhuTrachQuanHuyen" [(ngModel)]="user.phuTrachQuanHuyenIds" multiple>
+                                        <mat-option *ngFor="let quanhuyen of danhSachQuanHuyen" [value]="quanhuyen.id">{{ quanhuyen.displayName }}</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <textarea matInput name="Description" [placeholder]="'Description' | localize"
+                                [(ngModel)]="user.description" rows="3"></textarea>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab>
+                <ng-template matTabLabel>
+                    <span [matBadge]="totalRole" matBadgeOverlap="false">{{ 'UserRoles' | localize }}</span>
+                </ng-template>
+                <br />
+                <div class="row-fluid">
+                    <ng-template ngFor let-role [ngForOf]="roles">
+                        <div class="col-sm-4">
+                            <div class="checkbox-wrapper">
+                                <mat-checkbox [checked]="isRoleChecked(role.normalizedName)"
+                                    (change)="onRoleChange(role, $event)">
+                                    {{ role.displayName }}
+                                </mat-checkbox>
+                            </div>
+                        </div>
+                    </ng-template>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-dialog-content>
+    <div mat-dialog-actions align="end" style="padding-bottom: 20px;">
+        <button mat-button type="button" [disabled]="saving" (click)="close(false)" style="margin-right: 5px;">
+            {{ "Cancel" | localize }}
+        </button>
+        <button mat-flat-button type="submit" flex="15" color="primary"
+            [disabled]="!editUserModal.form.valid || saving">
+            {{ "Save" | localize }}
+        </button>
+    </div>
+</form>

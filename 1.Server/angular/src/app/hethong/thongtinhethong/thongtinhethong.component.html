@@ -1,0 +1,45 @@
+<div class="row clearfix" [@routerTransition]>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card main-content">
+            <div class="header">
+                <h2>{{ "ThongTinHeThong" | localize }}</h2>
+            </div>
+            <div class="body table-responsive">
+                <!--query start-->
+                <div class="row clearfix">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-12 text-right p-r-25 p-l-25">
+                                <button mat-flat-button color="primary" (click)="create()"
+                                    [disabled]="thongTinHienTai.soHotLine == thongTinHeThong.soHotLine && thongTinHienTai.email == thongTinHeThong.email
+                                        && thongTinHienTai.facebook == thongTinHeThong.facebook && thongTinHienTai.diaChi == thongTinHeThong.diaChi">
+                                    <mat-icon>save</mat-icon> {{ 'Save' | localize }}</button>
+                            </div>
+                            <div class="col-md-12 p-r-25 p-l-25">
+                                <mat-form-field>
+                                    <input matInput name="SoHotLine" [placeholder]="'SoHotLine' | localize" [(ngModel)]="thongTinHeThong.soHotLine"
+                                        maxlength="12" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-12 p-r-25 p-l-25">
+                                <mat-form-field>
+                                    <input matInput name="Email" [placeholder]="'Email' | localize" [(ngModel)]="thongTinHeThong.email"/>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-12 p-r-25 p-l-25">
+                                <mat-form-field>
+                                    <input matInput name="Facebook" [placeholder]="'Facebook' | localize" [(ngModel)]="thongTinHeThong.facebook"/>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-12 p-r-25 p-l-25">
+                                <mat-form-field>
+                                    <textarea matInput name="DiaChi" [placeholder]="'DiaChi' | localize" [(ngModel)]="thongTinHeThong.diaChi" rows="3"></textarea>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

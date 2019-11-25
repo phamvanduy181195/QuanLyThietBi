@@ -1,0 +1,84 @@
+<form autocomplete="off" #createTramDichVuModal="ngForm" (ngSubmit)="save()">
+    <h1 mat-dialog-title>{{ "CreateTramDichVu" | localize }}</h1>
+    <mat-dialog-content style="width:800px;height:500px;">
+        <mat-tab-group>
+            <mat-tab [label]="'TramDichVuDetails' | localize">
+                <br />
+                <div class="row-fluid">
+                    <div class="col-md-3">
+                        <mat-form-field>
+                            <input matInput name="Code" [placeholder]="'TramDichVuCode' | localize"
+                                [(ngModel)]="tramdichvu.code" required maxlength="50" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-4">
+                        <mat-form-field>
+                            <input matInput name="Name" [placeholder]="'TramDichVuName' | localize"
+                                [(ngModel)]="tramdichvu.name" required maxlength="255" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-5">
+                        <mat-form-field>
+                            <mat-select [placeholder]="'TramTruongName' | localize" [(ngModel)]="tramdichvu.tramTruongId" name="TramTruong" required>
+                                <mat-option *ngFor="let tramtruong of danhSachTramTruong" [value]="tramtruong.id">{{ tramtruong.displayName }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <input matInput name="DiaChi" [placeholder]="'DiaChi' | localize"
+                                [(ngModel)]="tramdichvu.diaChi" maxlength="255" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field>
+                            <mat-select [placeholder]="'TinhThanh' | localize" [(ngModel)]="tramdichvu.diaChiTinhThanhId"
+                                name="DiaChiTinhThanh" (selectionChange)="onChangeTinhThanh($event.value)">
+                                <mat-option *ngFor="let tinhthanh of danhSachTinhThanh" [value]="tinhthanh.id">{{ tinhthanh.displayName }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field>
+                            <mat-select [placeholder]="'QuanHuyen' | localize" [(ngModel)]="tramdichvu.diaChiQuanHuyenId" name="DiaChiQuanHuyen">
+                                <mat-option *ngFor="let quanhuyen of danhSachQuanHuyen" [value]="quanhuyen.id">{{ quanhuyen.displayName }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-12">
+                        <mat-form-field>
+                            <textarea matInput name="Description" [placeholder]="'Description' | localize"
+                                [(ngModel)]="tramdichvu.description" rows="5"></textarea>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab>
+                <ng-template matTabLabel>
+                    <span [matBadge]="totalNhanVien" matBadgeOverlap="false">{{ 'DanhSachNhanVien' | localize }}</span>
+                </ng-template>
+                <br />
+                <div class="row-fluid">
+                    <ng-template ngFor let-nhanVien [ngForOf]="danhSachNhanVien">
+                        <div class="col-sm-6">
+                            <div class="checkbox-wrapper">
+                                <mat-checkbox (change)="onNhanVienChange(nhanVien, $event)">
+                                    {{ nhanVien.displayName }}
+                                </mat-checkbox>
+                            </div>
+                        </div>
+                    </ng-template>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-dialog-content>
+    <div mat-dialog-actions align="end" style="padding-bottom: 20px;">
+        <button mat-button type="button" [disabled]="saving" (click)="close(false)" style="margin-right: 5px;">
+            {{ "Cancel" | localize }}
+        </button>
+        <button mat-flat-button type="submit" flex="15" color="primary"
+            [disabled]="!createTramDichVuModal.form.valid || saving">
+            {{ "Save" | localize }}
+        </button>
+    </div>
+</form>

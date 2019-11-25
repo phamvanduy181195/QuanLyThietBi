@@ -1,0 +1,17 @@
+    <div class="user-info">
+    <div class="image">
+        <img src="data:image/png;base64,{{appSession.user.profilePictureBase64}}" width="64" height="64" alt="User" />
+    </div>
+    <div class="info-container" style="top: 10px;">
+        <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{shownLoginName}}</div>
+        <div class="email">{{appSession.user.emailAddress}}</div>
+        <div class="btn-group user-helper-dropdown">
+            <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+            <ul class="dropdown-menu pull-right">
+                <li><a [routerLink]="['/app/update-info']"><i class="material-icons">person</i>{{ 'UpdateInfo' | localize }}</a></li>
+                <li><a [routerLink]="['/app/update-password']"><i class="material-icons">vpn_key</i>{{ 'UpdatePassword' | localize }}</a></li>
+                <li><a (click)="logout()"><i class="material-icons">input</i>{{ 'Logout' | localize }}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
