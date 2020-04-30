@@ -2383,6 +2383,11 @@ domain-browser@^1.1.1:
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
   integrity sha512-jnjyiM6eRyZl2H+W8Q/zLMA481hzi0eszAaBUzIVnmYVDBbnLxVNnfu1HgEBvCbL+71FrxMl3E6lpKH7Ge3OXA==
 
+dropzone@^5.5.0:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/dropzone/-/dropzone-5.7.0.tgz#8d1007f3ebcc6e6d64096823f854d898f7564ef2"
+  integrity sha512-kOltiZXH5cO/72I22JjE+w6BoT6uaVLfWdFMsi1PMKFkU6BZWpqRwjnsRm0o6ANGTBuZar5Piu7m/CbKqRPiYg==
+
 duplexer@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
@@ -4200,10 +4205,10 @@ jquery-sparkline@^2.4.0:
   resolved "https://registry.yarnpkg.com/jquery-sparkline/-/jquery-sparkline-2.4.0.tgz#1be8b7b704dd3857152708aefb1d4a4b3a69fb33"
   integrity sha1-G+i3twTdOFcVJwiu+x1KSzpp+zM=
 
-"jquery@>= 1.7", jquery@>=1.12.0, jquery@>=1.7.x, jquery@^3.1.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
-  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
+"jquery@>= 1.7", jquery@>=1.12.0, jquery@>=1.7.x, jquery@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.0.tgz#9980b97d9e4194611c36530e7dc46a58d7340fc9"
+  integrity sha512-Xb7SVYMvygPxbFMpTFQiHh1J7HClEaThguL15N/Gg37Lri/qKyhRGZYzHRyLH8Stq3Aow0LsHO2O2ci86fCrNQ==
 
 js-base64@^2.1.8:
   version "2.5.1"
@@ -5073,6 +5078,20 @@ ngx-bootstrap@^3.0.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-3.3.0.tgz#91f1644a6fff8a493bc58a16bd9d02db7320bd6a"
   integrity sha512-eGKjMPM4XhYVCr/NdGnQ3SCOSUGMe00lytOmuDAgHf2JwMGfMD3EE7hX9KAONfNbUEuHzRfsjDAuQhWbCvZ8xg==
+
+ngx-dropzone-wrapper@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-dropzone-wrapper/-/ngx-dropzone-wrapper-8.0.0.tgz#0828b92985d5533c25ea2ba6c179664faf77fd23"
+  integrity sha512-56nXp70DR5NRzvISi5l0bXONdda+2DGNJGBxwIn9oM9CD27aac7CT4aU5Vo4R0KDFcMNiTO3zFQvuDhHvSq54Q==
+  dependencies:
+    dropzone "^5.5.0"
+
+ngx-dropzone@^2.1.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/ngx-dropzone/-/ngx-dropzone-2.2.2.tgz#450609031efb909461181c6b693d7c5f793a278d"
+  integrity sha512-REuBcPNTY33OtcZD6dw8Fq/jFqwviiYydYaCn74yig8TvDDYhtJ/BPjtvbw7uEgF4BJr/UEHbKMvkdZIyCgsww==
+  dependencies:
+    tslib "^1.9.0"
 
 ngx-pagination@^3.0.3:
   version "3.3.1"
