@@ -2383,6 +2383,11 @@ domain-browser@^1.1.1:
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
   integrity sha512-jnjyiM6eRyZl2H+W8Q/zLMA481hzi0eszAaBUzIVnmYVDBbnLxVNnfu1HgEBvCbL+71FrxMl3E6lpKH7Ge3OXA==
 
+dropzone@^5.5.0:
+  version "5.9.3"
+  resolved "https://registry.yarnpkg.com/dropzone/-/dropzone-5.9.3.tgz#b3070ae090fa48cbc04c17535635537ca72d70d6"
+  integrity sha512-Azk8kD/2/nJIuVPK+zQ9sjKMRIpRvNyqn9XwbBHNq+iNuSccbJS6hwm1Woy0pMST0erSo0u4j+KJaodndDk4vA==
+
 duplexer@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
@@ -4944,10 +4949,10 @@ moment-timezone@^0.5.13:
   dependencies:
     moment ">= 2.9.0"
 
-moment@*, "moment@>= 2.9.0", moment@>=2.14.0, moment@^2.10.2, moment@^2.18.1:
-  version "2.24.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
-  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
+moment@*, "moment@>= 2.9.0", moment@>=2.14.0, moment@^2.10.2, moment@^2.29.4:
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
 
 morris.js@^0.5.0:
   version "0.5.0"
@@ -5073,6 +5078,20 @@ ngx-bootstrap@^3.0.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-3.3.0.tgz#91f1644a6fff8a493bc58a16bd9d02db7320bd6a"
   integrity sha512-eGKjMPM4XhYVCr/NdGnQ3SCOSUGMe00lytOmuDAgHf2JwMGfMD3EE7hX9KAONfNbUEuHzRfsjDAuQhWbCvZ8xg==
+
+ngx-dropzone-wrapper@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-dropzone-wrapper/-/ngx-dropzone-wrapper-8.0.0.tgz#0828b92985d5533c25ea2ba6c179664faf77fd23"
+  integrity sha512-56nXp70DR5NRzvISi5l0bXONdda+2DGNJGBxwIn9oM9CD27aac7CT4aU5Vo4R0KDFcMNiTO3zFQvuDhHvSq54Q==
+  dependencies:
+    dropzone "^5.5.0"
+
+ngx-dropzone@^2.1.2:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/ngx-dropzone/-/ngx-dropzone-2.5.0.tgz#40f4e291453b4ce2f98681f201e4c096493d3c9b"
+  integrity sha512-Q6F+veHVvGwJmQlgLA9p7P2GHtzY4kC8xJ2NWlke1YAt0utICC9jSXg8QZD6n1iFBYX1xOooPmd6X6Fo405C0g==
+  dependencies:
+    tslib "^1.9.0"
 
 ngx-pagination@^3.0.3:
   version "3.3.1"
