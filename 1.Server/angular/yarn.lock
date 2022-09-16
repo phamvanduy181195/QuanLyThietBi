@@ -1239,7 +1239,7 @@ bootstrap-select@^1.12.2:
   resolved "https://registry.yarnpkg.com/bootstrap-select/-/bootstrap-select-1.13.11.tgz#d364ccc67cd6c1f9158689087f1d2d029df82c29"
   integrity sha512-WPpx2DYL9jVilNoqy4Pjcfa/Q0LOq8V0+xws/pmnRDn/deS7OYjo1njvD1Cv0s9/1ZUXt77UypxuloimEnkYsA==
 
-bootstrap@^3.3.7:
+bootstrap@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.4.1.tgz#c3a347d419e289ad11f4033e3c4132b87c081d72"
   integrity sha512-yN5oZVmRCwe5aKwzRj6736nSmKDX7pLYwsXiCj/EYmo16hODaBiT4En5btW/jhBF/seV+XMx3aYwukYC3A49DA==
@@ -2382,6 +2382,11 @@ domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
   integrity sha512-jnjyiM6eRyZl2H+W8Q/zLMA481hzi0eszAaBUzIVnmYVDBbnLxVNnfu1HgEBvCbL+71FrxMl3E6lpKH7Ge3OXA==
+
+dropzone@^5.5.0:
+  version "5.9.3"
+  resolved "https://registry.yarnpkg.com/dropzone/-/dropzone-5.9.3.tgz#b3070ae090fa48cbc04c17535635537ca72d70d6"
+  integrity sha512-Azk8kD/2/nJIuVPK+zQ9sjKMRIpRvNyqn9XwbBHNq+iNuSccbJS6hwm1Woy0pMST0erSo0u4j+KJaodndDk4vA==
 
 duplexer@^0.1.1:
   version "0.1.1"
@@ -5073,6 +5078,20 @@ ngx-bootstrap@^3.0.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-3.3.0.tgz#91f1644a6fff8a493bc58a16bd9d02db7320bd6a"
   integrity sha512-eGKjMPM4XhYVCr/NdGnQ3SCOSUGMe00lytOmuDAgHf2JwMGfMD3EE7hX9KAONfNbUEuHzRfsjDAuQhWbCvZ8xg==
+
+ngx-dropzone-wrapper@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-dropzone-wrapper/-/ngx-dropzone-wrapper-8.0.0.tgz#0828b92985d5533c25ea2ba6c179664faf77fd23"
+  integrity sha512-56nXp70DR5NRzvISi5l0bXONdda+2DGNJGBxwIn9oM9CD27aac7CT4aU5Vo4R0KDFcMNiTO3zFQvuDhHvSq54Q==
+  dependencies:
+    dropzone "^5.5.0"
+
+ngx-dropzone@^2.1.2:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/ngx-dropzone/-/ngx-dropzone-2.5.0.tgz#40f4e291453b4ce2f98681f201e4c096493d3c9b"
+  integrity sha512-Q6F+veHVvGwJmQlgLA9p7P2GHtzY4kC8xJ2NWlke1YAt0utICC9jSXg8QZD6n1iFBYX1xOooPmd6X6Fo405C0g==
+  dependencies:
+    tslib "^1.9.0"
 
 ngx-pagination@^3.0.3:
   version "3.3.1"
